@@ -1,0 +1,11 @@
+.logoBar {
+  background: var(--gray-700);
+  padding: 4.5rem 0 5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.logoBar img {
+  width: 7.875rem;
+}

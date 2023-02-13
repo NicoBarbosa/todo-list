@@ -1,0 +1,92 @@
+.Task {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--gray-500);
+  gap: 12px;
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  margin-top: 1.5rem;
+}
+
+.Task .p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 19.6px;
+  width: 100%;
+}
+
+.lineTaskCompleted {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 19.6px;
+  width: 100%;
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.Task button {
+  background: none;
+  border: 0;
+  color: var(--gray-300);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 4px 3px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.Task button:hover {
+  background-color: var(--gray-400);
+  color: var(--danger);
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox'] + label{
+  display: block;
+}
+
+input[type='checkbox'] + label::before {
+  content: "";
+  border-radius: 999px;
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+input[type='checkbox']:hover + label::before {
+  border-color: var(--blue-dark);
+}
+
+input[type='checkbox']:checked + label::before {
+  background-image: url("../assets/check.svg");
+  background-size: contain;
+  background-position: center;
+  background-color: var(--purple-dark);
+  border-color: var(--purple-dark);
+  transition: all 0.3s;
+}
+
+input[type='checkbox']:hover:checked + label::before {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+input[type='checkbox'] + label:active::before {
+  transform: scale(0) rotate(180deg);
+  transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+
